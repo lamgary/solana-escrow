@@ -57,7 +57,7 @@ const setup = async () => {
   const bobPublicKey = getPublicKey("bob");
   const clientKeypair = getKeypair("id");
 
-  const connection = new Connection("http://localhost:8899", "confirmed");
+  const connection = new Connection("http://127.0.0.1:8899", "confirmed");
   console.log("Requesting SOL for Alice...");
   // some networks like the local network provide an airdrop function (mainnet of course does not)
   await connection.requestAirdrop(alicePublicKey, LAMPORTS_PER_SOL * 10);
